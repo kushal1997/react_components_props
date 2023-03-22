@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { TaskCard } from "./TaskCard";
 
 export const Task = (props) => {
     const [tasks,setTasks]=useState([
@@ -20,10 +21,7 @@ export const Task = (props) => {
         <button onClick={()=> setShow(!show)}>Toggle</button>
         {
           show && tasks.map((task) =>(
-            <li key={task.id} className={task.completed? "completed":"incomplete"}>
-              <span>{task.id} - {task.name}</span>
-              <button onClick={()=> handleDelete(task.id)}>Delete</button>
-            </li>
+            <TaskCard key={ task.id} task={task} handleDelete={handleDelete}/>
           ))
         }
           
