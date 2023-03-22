@@ -2,7 +2,7 @@ import { useState } from "react";
 import { TaskCard } from "./TaskCard";
 import { BoxCard } from "./BoxCard";
 
-export const Task = (props) => {
+export const Task = ({info}) => {
     const [tasks,setTasks]=useState([
         {id: 1, name:"Record Videos", completed:false },
         {id: 2, name:"Listem Music", completed:true},
@@ -17,12 +17,12 @@ export const Task = (props) => {
 
   return (
     <>
-        <h1>Task List {props.title} {props.subtitle}</h1>
+        <h1>Task List</h1>
         <ul>
         <button onClick={()=> setShow(!show)}>Toggle</button>
         {
           show && tasks.map((task) =>(
-            <TaskCard key={ task.id} task={task} handleDelete={handleDelete}/>
+            <TaskCard info={info} key={ task.id} task={task} handleDelete={handleDelete}/>
           ))
         }
           
