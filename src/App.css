@@ -1,36 +1,29 @@
 .App{
   text-align: center;
 }
-.box{
-  max-width: 200px;
-  margin: 50px auto;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  padding: 10px;
+a{
+  text-decoration: none;
+  color: #000000;
 }
-p{
-  margin-top: 20px;
-  font-size: 24px;
+h1{
+  font-size: 28px;
   text-align: center;
+  margin: 20px;
 }
-button{
-  padding: 10px;
-  margin: 20px 10px;
-  font-size: 16px;
-  color: #940c0c;
-  border: 0px;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: aqua;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+  border-bottom: 1px solid #d7d7d7;
+  font-size: 18px;
+  padding: 0px 10px;
 }
-button.add{
-  background-color: #18978F;
-}
-button.sub{
-  background-color: #EB4747;
-}
-button.reset{
-  background-color: #0F3460;
+img{
+  max-width: 40px;
 }
 ul{
   max-width: 600px;
@@ -38,7 +31,6 @@ ul{
   padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
-
 li{
   font: 16px;
   list-style: none;
@@ -50,11 +42,54 @@ li{
   justify-content: space-between;
   align-items: center;
 }
-
 li.completed{
   box-shadow: rgb(62, 150, 0) 0px 1px 4px;
 }
-
 li.incomplete{
   box-shadow: rgba(135, 20, 0, 0.689) 0px 1px 4px;
+}
+button.delete{
+  border: 0px;
+  border-radius: 5px;
+  background-color: #be3434;
+  color: #FFFFFF;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+button.trigger{
+  border: 0px;
+  border-radius: 5px;
+  background-color: #0F3460;
+  color: #FFFFFF;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.box{
+  width: 400px;
+  margin: 20px auto;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 20px 5px;
+  border: 0px;
+  border-radius: 5px;
+}
+.box.success{
+  background-color: #baffbf;
+}
+.box.alert{
+  background-color: #ffb4b4;
+}
+.box.warning{
+  background-color: #FFDEB4;
+}
+.box p{
+  margin: 10px;
+}
+.box p.title{
+  font-size: 20px;
+}
+.box p.description{
+  font-size: 14px;
+}
+.hidden{
+  display: none;
 }
